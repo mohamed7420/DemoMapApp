@@ -54,7 +54,7 @@
 		BA0891E2231DBF06003A431C /* DemoMapApp */ = {
 			isa = PBXGroup;
 			children = (
-				BA0891FF231F2E9A003A431C /* Model */,
+				BA089200231F2FE7003A431C /* Model */,
 				BA0891FE231F2E8F003A431C /* View */,
 				BA0891FD231F2E6B003A431C /* Controller */,
 				BA0891EC231DBF07003A431C /* LaunchScreen.storyboard */,
@@ -81,7 +81,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BA0891FF231F2E9A003A431C /* Model */ = {
+		BA089200231F2FE7003A431C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
