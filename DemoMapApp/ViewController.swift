@@ -52,11 +52,23 @@ class ViewController: UIViewController {
         
         segmentedControll.addTarget(self, action: #selector(changeMapViewType), for: .valueChanged)
         
+        
+        
     }
     
+    fileprivate func addAnotationOfPoint(){
+    
+        let annotation = MKPointAnnotation()
+       // annotation.coordinate = CLLocationCoordinate2D(latitude: 30.7326622, longitude: 31.7195459)
+       annotation.title = "iOS developers"
+        annotation.subtitle = "learning iOS"
+        annotation.coordinate = mapView.userLocation.coordinate
+        mapView.addAnnotation(annotation)
+    
+    }
    
     
-    func focusOnUserOnTheMap(){
+    fileprivate func focusOnUserOnTheMap(){
         
         if let location = locationManger.location?.coordinate{
             
@@ -114,6 +126,7 @@ extension ViewController : MKMapViewDelegate {
         let region  = MKCoordinateRegion(center: center, latitudinalMeters: 10, longitudinalMeters: 10)
         
         mapView.setRegion(region, animated: true)
+        addAnotationOfPoint()
     }
     
 }
